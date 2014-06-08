@@ -98,3 +98,10 @@ export EDITOR='subl -w'
 
 source ~/.git-completion.bash
 [ -s "/Users/weili/.nvm/nvm.sh" ] && . "/Users/weili/.nvm/nvm.sh" # This loads nvm
+
+export FHC_OPS=/Users/weili/work/fh/ops/henry-ops/FHCops
+source $FHC_OPS/bin/fh-aliases-iterm.sh
+source $FHC_OPS/bin/fh-aliases-ssh.sh
+
+export PATH=$PATH:$HOME/work/fh/ops/henry-ops/FHCws/bin
+
