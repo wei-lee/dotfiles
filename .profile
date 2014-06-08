@@ -97,3 +97,4 @@ export PATH=$PATH:"/Applications/Google Chrome.app"
 export EDITOR='subl -w'
 
 source ~/.git-completion.bash
+[ -s "/Users/weili/.nvm/nvm.sh" ] && . "/Users/weili/.nvm/nvm.sh" # This loads nvm
