@@ -133,7 +133,7 @@ source ~/$DOTFILESDIR/bashmarks/bashmarks.sh
 # fi
 
 function _update_ps1() {
-   export PS1="$(~/$DOTFILESDIR/powerline-shell/powerline-shell.py $? --cwd-max-depth 4 --colorize-hostname  2> /dev/null)"
+   export PS1="$(~/$DOTFILESDIR/powerline-shell/powerline-shell.py $? --cwd-max-depth 4 2> /dev/null)"
 }
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
