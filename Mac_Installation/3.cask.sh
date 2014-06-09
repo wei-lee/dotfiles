@@ -47,6 +47,8 @@ installcask --appdir="/Applications/" shuttle
 installcask --appdir="/Applications/"  colorpicker-skalacolor
 installcask --appdir="/Applications/"  cakebrew
 installcask --appdir="/Applications/"  appcleaner
+installcask adium
+installcask bettertouchtool
 
 # https://github.com/sindresorhus/quick-look-plugins
 brew cask install qlcolorcode qlstephen qlmarkdown quicklook-json qlprettypatch quicklook-csv betterzipql webp-quicklook suspicious-package
