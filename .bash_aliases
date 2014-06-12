@@ -153,3 +153,6 @@ fi
 alias chrome="open -a google\ chrome"
 alias filemerge="open -a '/Applications/Xcode.app/Contents/Applications/FileMerge.app'"
 
+#https://blog.splice.com/cleaning-git-branches/
+alias gitpurge="git fetch origin && git checkout master && git remote prune origin | git branch -r --merged | grep -v master | sed -e 's/origin\//:/' | xargs git push origin"
+
