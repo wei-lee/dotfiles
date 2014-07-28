@@ -294,10 +294,6 @@ export PATH=$PATH:"/Applications/Google Chrome.app"
 # Editor
 export EDITOR='subl -w'
 
-# NVM
-# =============================================
-[ -s "~/.nvm/nvm.sh" ] && . "~/.nvm/nvm.sh"
-
 # Work Related
 # =============================================
 source ~/$DOTFILESDIR/.bash_fh
@@ -310,6 +306,12 @@ source ~/$DOTFILESDIR/.bash_fh
 # =============================================
 setjdk 1.7
 
+# NVM
+# =============================================
+[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
+
+# FH Cap
+export FH_SRC_DIR=/Users/weili/work/fh/eng
 # =============================================
 # DEV
 # =============================================
