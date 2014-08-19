@@ -315,6 +315,11 @@ export FH_SRC_DIR=/Users/weili/work/fh/eng
 # =============================================
 # DEV
 # =============================================
+# 
+
+#GO lang
+export GOPATH=/Users/weili/learn/go
+export PATH=$PATH:$GOPATH/bin
 
 # FIX MySQLdb ERROR
 # ===========================
