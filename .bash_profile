@@ -180,6 +180,12 @@ if [ -f ~/$DOTFILESDIR/completions/fhc-completion ]; then
     source ~/$DOTFILESDIR/completions/fhc-completion
 fi
 
+# TMUXINATOR COMPLETION
+# ============================
+if [ -f ~/$DOTFILESDIR/completions/tmuxinator.bash ]; then
+    source ~/$DOTFILESDIR/completions/tmuxinator.bash
+fi
+
 
 # DJANGO COMPLETION
 # ===========================
@@ -292,7 +298,7 @@ export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 export PATH=$PATH:"/Applications/Google Chrome.app"
 
 # Editor
-export EDITOR='subl -w'
+export EDITOR='vim'
 
 # Work Related
 # =============================================
