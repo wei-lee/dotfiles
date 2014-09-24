@@ -76,3 +76,6 @@
 # Requires git => 1.7
 [include]
     path = ~/.git_extra
+[user]
+	name = Wei Li
+	email = wei.li@feedhenry.com

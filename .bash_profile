@@ -327,6 +327,9 @@ export FH_SRC_DIR=/Users/weili/work/fh/eng
 export GOPATH=/Users/weili/learn/go
 export PATH=$PATH:$GOPATH/bin
 
+#DOCKER
+#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+
 # FIX MySQLdb ERROR
 # ===========================
 # Fix problem when importing
