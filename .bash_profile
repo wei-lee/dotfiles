@@ -325,7 +325,8 @@ export FH_SRC_DIR=/Users/weili/work/fh/eng
 
 #GO lang
 export GOPATH=/Users/weili/learn/go
-export PATH=$PATH:$GOPATH/bin
+export FHCAP=/Users/weili/work/fh/chef/fhcap
+export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
 
 #DOCKER
 #export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
@@ -371,3 +372,16 @@ export PATH=$PATH:$GOPATH/bin
 
 # Dotfiles inspired based on
 #https://github.com/LeonardoGentile/$DOTFILESDIR/
+# New environment setting added by BB10 WebWorks SDK 2.2.0.15 on Thu Oct 16 10:18:59 IST 2014 1.
+# The unmodified version of this file is saved in /Users/weili/.bash_profile561343396.
+# Do NOT modify these lines; they are used to uninstall.
+WEBWORKS_HOME="/Applications/BB10 WebWorks SDK 2.2.0.15"
+export WEBWORKS_HOME
+# End comments by InstallAnywhere on Thu Oct 16 10:18:59 IST 2014 1.
+
+# New environment setting added by BB10 WebWorks SDK 2.2.0.15 on Thu Oct 16 10:18:59 IST 2014 2.
+# The unmodified version of this file is saved in /Users/weili/.bash_profile561343396.
+# Do NOT modify these lines; they are used to uninstall.
+PATH="$WEBWORKS_HOME:$WEBWORKS_HOME/cordova-blackberry/bin/dependencies/bb-tools/bin:${PATH}"
+export PATH
+# End comments by InstallAnywhere on Thu Oct 16 10:18:59 IST 2014 2.

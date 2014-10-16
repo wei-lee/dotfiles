@@ -46,8 +46,8 @@ alias msg01='ssh hadmin@e102-msg-01.feedhenry.net'
 alias bob='ssh hadmin@bob.feedhenry.net'
 
 # Ops command line tools
-export FHC_OPS=/Users/weili/work/fh/ops/henry-ops/trunk/FHCops
+export FHC_OPS=/Users/weili/repos/henry-ops/trunk/FHCops
 source $FHC_OPS/bin/fh-aliases-iterm.sh
 source $FHC_OPS/bin/fh-aliases-ssh.sh
 
-export PATH=$PATH:$HOME/work/fh/ops/henry-ops/FHCws/bin
+export PATH=$PATH:$HOME/repos/henry-ops/trunk/FHCws/bin
