@@ -329,7 +329,7 @@ export FHCAP=/Users/weili/work/fh/chef/fhcap
 export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
 
 #DOCKER
-#export DOCKER_HOST=tcp://$(boot2docker ip 2>/dev/null):2375
+export DOCKER_HOST=tcp://192.168.59.103:2375
 
 # FIX MySQLdb ERROR
 # ===========================
@@ -369,6 +369,11 @@ export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
 # export LIBRARY_PATH=$LIBRARY_PATH:/Developer/SDKs/MacOSX10.6.sdk/usr/lib:/usr/local/lib/
 
 
+# export M2_HOME="/Apache/maven/current"
+# export M2=$M2_HOME/bin
+# export PATH=$M2:$PATH
+# export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=512M"
+# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Dotfiles inspired based on
 #https://github.com/LeonardoGentile/$DOTFILESDIR/
