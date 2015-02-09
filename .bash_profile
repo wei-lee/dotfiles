@@ -326,10 +326,13 @@ export FH_SRC_DIR=/Users/weili/work/fh/eng
 #GO lang
 export GOPATH=/Users/weili/learn/go
 export FHCAP=/Users/weili/work/fh/chef/fhcap
+export FHCAP_DATA_DIR=/Users/weili/work/fh/chef/fhcap-dev
 export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
 
 #DOCKER
-export DOCKER_HOST=tcp://192.168.59.103:2375
+export DOCKER_CERT_PATH=/Users/weili/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
+export DOCKER_HOST=tcp://192.168.59.103:2376
 
 # FIX MySQLdb ERROR
 # ===========================
