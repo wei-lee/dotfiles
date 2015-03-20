@@ -327,12 +327,13 @@ export FH_SRC_DIR=/Users/weili/work/fh/eng
 export GOPATH=/Users/weili/learn/go
 export FHCAP=/Users/weili/work/fh/chef/fhcap
 export FHCAP_DATA_DIR=/Users/weili/work/fh/chef/fhcap-dev
+export FH_SRC_DIR=/Users/weili/work/fh/eng
 export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
 
 #DOCKER
 export DOCKER_CERT_PATH=/Users/weili/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_HOST=tcp://192.168.59.106:2376
 
 # FIX MySQLdb ERROR
 # ===========================
@@ -393,3 +394,5 @@ export WEBWORKS_HOME
 PATH="$WEBWORKS_HOME:$WEBWORKS_HOME/cordova-blackberry/bin/dependencies/bb-tools/bin:${PATH}"
 export PATH
 # End comments by InstallAnywhere on Thu Oct 16 10:18:59 IST 2014 2.
+
+export ANDROID_HOME=/usr/local/Cellar/android-sdk/22.6.2/
