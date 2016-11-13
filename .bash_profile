@@ -214,7 +214,7 @@ export EDITOR='vim'
 
 # Work Related
 # =============================================
-source ~/$DOTFILESDIR/.bash_fh
+source ~/$DOTFILESDIR/.fh_alias
 
 # RVM
 # =============================================
