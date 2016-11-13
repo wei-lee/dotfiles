@@ -220,10 +220,6 @@ source ~/$DOTFILESDIR/.fh_alias
 # =============================================
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
-# Set JDK version, function is defined in bash_functions
-# =============================================
-setjdk 1.7
-
 # NVM
 # =============================================
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
