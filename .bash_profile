@@ -19,58 +19,10 @@ export DOTFILESDIR="dotfiles"
 # putting /usr/local/bin at the beginning of the file instead of the end
 # Even if we do it here it will be 'too late'
 
-# COREUTILS (GNU)
-# ===========================
-# I use the GNU ls (gls) included in COREUTILS (downloaded with BREW)
-# This let me use dircolors command, that will use .dircolors file to colorize gls
-# http://lostincode.net/posts/homebrew
-# http://www.conrad.id.au/2013/07/making-mac-os-x-usable-part-1-terminal.html
-# https://github.com/seebi/dircolors-solarized
-
-if [  -d /usr/local/opt/coreutils/libexec/gnubin  ]; then
-    PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
-fi
-
-if [ -d /usr/local/opt/coreutils/libexec/gnuman ]; then
-    MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
-fi
-
 # Local bin in my home (scripts various stuff)
 PATH="$PATH:~/bin"
 
-# Heroku Toolbelt
-#if [[ -d /usr/local/heroku/bin ]]; then
-#    PATH="$PATH:/usr/local/heroku/bin"
-#fi
-
-# MySql bin
-#if [ -d /usr/local/opt/mysql/lib ]; then
-#    PATH="${PATH}:/usr/local/opt/mysql/bin"
-#elif [ -d /usr/local/mysql/bin ]; then
-#    PATH="${PATH}:/usr/local/mysql/bin"
-#fi
-
-# SenchaSDKTools
-#if [[ -d /Applications/SenchaSDKTools ]]; then
-#    PATH="${PATH}:/Applications/SenchaSDKTools"
-#    export SENCHA_SDK_TOOLS_2_0_0_BETA3="/Applications/SenchaSDKTools"
-#fi
-
-# Redis (manually installed)
-# PATH="$PATH:~/bin/redis"
-
-# gcc and other dev stuff
-# PATH="${PATH}:/Developer/usr/bin"
-# PATH="${PATH}:/Developer/usr/bin"
-
-# PATH for Python 2.7
-# PATH="${PATH}:/Library/Frameworks/Python.framework/Versions/2.7/bin"
-#
-# PATH="${PATH}:/usr/local/share/python"
-# No needed with python installed from brew
-
 export PATH
-
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
@@ -81,17 +33,6 @@ if ls --color > /dev/null 2>&1; then # GNU `ls`
 else # OS X `ls`
     alias ls='ls -G'
 fi
-
-# VIRTUALENVWRAPPER (should go before bash_functions)
-# =============================================
-# Check the workon_cwd function in bash_prompt or the .virtualenv/postactivate file
-# to customize the shell prompt after the virtualenv activation
-#export WORKON_HOME="$HOME/.virtualenvs"
-#if [[ -f /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh ]]; then
-#    source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
-#elif [ -f $(brew --prefix)/bin/virtualenvwrapper.sh ]; then
-#    source $(brew --prefix)/bin/virtualenvwrapper.sh
-#fi
 
 # BASH_ALIASES
 # =============================================
@@ -110,35 +51,6 @@ source ~/$DOTFILESDIR/.bash_functions
 bash_extra=~/.bash_extra
 [ -r "$bash_extra" ] && [ -f "$bash_extra" ] && source "$bash_extra"
 
-
-# BASHMARKS
-# =============================================
-# http://bilalh.github.com/2012/01/14/enchanted-bashmarks-terminal-directory-bookmarks/
-source ~/$DOTFILESDIR/bashmarks/bashmarks.sh
-
-# PYTHON STARTUP
-# =============================================
-# Completion for python command line (commented out right now)
-# Custom hystory file
-#export PYTHONSTARTUP=~/$DOTFILESDIR/.pystartup.py
-
-# BASH PROMPT (powerline shell)
-# =============================================
-
-# to know how many colors are supported by the terminal (it is based on the terminfo database):
-# if [ $(tput colors) -ge 256 ] ; then
-# PS1="your 256 color prompt"
-# else
-# PS1="your default prompt"
-# fi
-
-function _update_ps1() {
-   export PS1="$(~/$DOTFILESDIR/powerline-shell/powerline-shell.py $? --cwd-max-depth 4 2> /dev/null)"
-}
-export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
-
-
-# source utils/bash-powerline.sh
 
 # =============================================
 # COMPLETIONS
@@ -315,84 +227,3 @@ setjdk 1.7
 # NVM
 # =============================================
 [[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"
-
-# FH Cap
-export FH_SRC_DIR=/Users/weili/work/fh/eng
-# =============================================
-# DEV
-# =============================================
-# 
-
-#GO lang
-export GOPATH=/Users/weili/learn/go
-export FHCAP=/Users/weili/work/fh/chef/fhcap
-export FHCAP_DATA_DIR=/Users/weili/work/fh/chef/fhcap-dev
-export FH_SRC_DIR=/Users/weili/work/fh/eng
-export PATH=$PATH:$FHCAP/bin:$GOPATH/bin
-
-#DOCKER
-export DOCKER_CERT_PATH=/Users/weili/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-export DOCKER_HOST=tcp://192.168.59.106:2376
-
-# FIX MySQLdb ERROR
-# ===========================
-# Fix problem when importing
-# mysql-python (MySQLdb)
-# http://stackoverflow.com/questions/4559699/python-mysqldb-and-library-not-loaded-libmysqlclient-16-dylib
-
-
-#if [ -d /usr/local/opt/mysql/lib ]; then
-#    export DYLD_LIBRARY_PATH=/usr/local/opt/mysql/lib:$DYLD_LIBRARY_PATH
-#elif [ -d /usr/local/mysql/lib ]; then
-#    export DYLD_LIBRARY_PATH=/usr/local/mysql/lib:$DYLD_LIBRARY_PATH
-#fi
-
-
-
-
-# SET COMPILER VERSION
-# ===========================
-# export CC="gcc-4.0"
-# export CXX="g++-4.0"
-
-# FIX RANDOM COMPILATION ERROR
-# ===========================
-# Because sometimes it doesn't
-# find the libs that are actually
-# here (e.g: crt1.10.6.o)
-# export MACOSX_DEPLOYMENT_TARGET=10.6
-
-# To Solve I problem I DON'T REMEMBER!
-# ===========================
-# export C_INCLUDE_PATH=$C_INCLUDE_PATH:/Developer/SDKs/MacOSX10.6.sdk/usr/include:/usr/local/include
-
-# HEADERS (I guess)
-# ===========================
-# I added the headers from brew (/usr/local/include)
-# export LIBRARY_PATH=$LIBRARY_PATH:/Developer/SDKs/MacOSX10.6.sdk/usr/lib:/usr/local/lib/
-
-
-# export M2_HOME="/Apache/maven/current"
-# export M2=$M2_HOME/bin
-# export PATH=$M2:$PATH
-# export MAVEN_OPTS="-Xmx2048m -XX:MaxPermSize=512M"
-# export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-# Dotfiles inspired based on
-#https://github.com/LeonardoGentile/$DOTFILESDIR/
-# New environment setting added by BB10 WebWorks SDK 2.2.0.15 on Thu Oct 16 10:18:59 IST 2014 1.
-# The unmodified version of this file is saved in /Users/weili/.bash_profile561343396.
-# Do NOT modify these lines; they are used to uninstall.
-WEBWORKS_HOME="/Applications/BB10 WebWorks SDK 2.2.0.15"
-export WEBWORKS_HOME
-# End comments by InstallAnywhere on Thu Oct 16 10:18:59 IST 2014 1.
-
-# New environment setting added by BB10 WebWorks SDK 2.2.0.15 on Thu Oct 16 10:18:59 IST 2014 2.
-# The unmodified version of this file is saved in /Users/weili/.bash_profile561343396.
-# Do NOT modify these lines; they are used to uninstall.
-PATH="$WEBWORKS_HOME:$WEBWORKS_HOME/cordova-blackberry/bin/dependencies/bb-tools/bin:${PATH}"
-export PATH
-# End comments by InstallAnywhere on Thu Oct 16 10:18:59 IST 2014 2.
-
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/22.6.2/

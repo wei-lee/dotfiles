@@ -93,28 +93,6 @@ alias emptyalltrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; su
 # alias rm="echo 'Use trash instead: trash my-file.txt'"
 
 
-# ========================================
-# Git
-# ========================================
-
-# alias gi='git'
-# __git_complete gi __git_main
-alias gb='git branch'
-alias gci='git commit -m'
-alias gco='git checkout'
-alias gfo='git fetch origin'
-alias gp='git push'
-alias gr='git rebase'
-alias grc='git rebase --continue'
-alias gs='git status'
-alias guci='git reset --soft HEAD^' # undo last commit
-alias gs='git status'
-alias gd='git diff'
-alias ga='git add'
-alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-alias log="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --"
-alias gis="git status -s"
-
 
 # ========================================
 # Quicklook

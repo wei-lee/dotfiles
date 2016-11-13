@@ -1,7 +1,0 @@
-BasedOnStyle: LLVM
-IndentWidth: 4
-TabWidth: 4
-PointerBindsToType: false
-ObjCSpaceAfterProperty: true
-ObjCSpaceBeforeProtocolList: true
-ObjCBlockIndentWidth: 4

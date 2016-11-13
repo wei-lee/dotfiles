@@ -17,25 +17,12 @@ bin=~/bin                # bin directory
 oldbin=~/bin_old         # old bin backup directory
 
 # list of files/folders to symlink in homedir
-files=".bash_profile .bashrc .gitattributes .gitconfig .gitignore_global"
-
-
-# =============================================#
-
-
+files=".bash_profile .bashrc .gitattributes .gitconfig .gitignore_global .zshrc"
 
 # create dotfiles_old in homedir
 echo "Creating $olddir for backup of any existing dotfiles in ~"
 mkdir -p $olddir
 echo "...done"
-
-# Moving .bashmarks_dirs file
-# Not in the repository, I overwrite this using my private  .dotfiles
-echo "Moving ~/.bashmarks_dirs from ~ to $olddir"
-mv ~/.bashmarks_dirs $olddir
-echo "Creating default .bashmarks_dirs file in home directory."
-# Don't forget to configure the bash_extra
-cp $dir/bashmarks/.bashmarks_dirs ~/.bashmarks_dirs
 
 
 # Moving .bash_extra file
@@ -53,6 +40,11 @@ mv ~/.git_extra $olddir
 echo "Creating empty .bash_extra file in home directory."
 # Don't forget to configure the bash_extra
 cp $dir/.git_extra ~/.git_extra
+
+echo "Moving DEFAULT .tool-versions for asdf from ~ to $olddir"
+mv ~/.tool-versions $olddir
+echo "Creating symlink for .tool-versions file"
+ln -s $dir/asdf/.tool-versions ~/.tool-versions
 
 # change to the dotfiles directory
 echo "Changing to the $dir directory"
