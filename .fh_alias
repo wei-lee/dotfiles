@@ -46,5 +46,4 @@ alias msg01='ssh hadmin@e102-msg-01.feedhenry.net'
 alias bob='ssh hadmin@bob.feedhenry.net'
 
 # Ops command line tools
-export BASH_SOURCE=/Users/weili/repos/rhm-utils
-source ~/repos/rhm-utils/profiles/bash.sh
+# source ~/repos/rhm-utils/profiles/bash.sh

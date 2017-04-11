@@ -1,6 +1,7 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore_global
+	pager = diff-so-fancy | less --tabs=4 -RFX
     # attributesfile = ~/.gitattributes
 [color "branch"]
     current = yellow reverse
@@ -79,3 +80,5 @@
 [user]
 	name = Wei Li
 	email = wei.li@redhat.com
+[commit]
+    template = ~/.git-commit-template
