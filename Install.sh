@@ -67,15 +67,6 @@ done
 
 echo "source $HOME/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
 
-# Copying bin dir
-# echo "Moving $bin to $oldbin"
-# # mkdir -p $oldbin;
-# # cp -r ~/bin $oldbin
-# rm -r $bin
-echo "Installing bin dir."
-ln -s $dir/bin ~/
-# cp -r
-
 
 
 # http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/

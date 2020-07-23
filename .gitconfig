@@ -81,8 +81,6 @@
 [user]
 	name = Wei Li
 	email = wei.li@redhat.com
-[commit]
-    template = ~/.git-commit-template
 [pull]
 	rebase = true
 [filter "lfs"]

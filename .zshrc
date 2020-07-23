@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to dotfiles
 export DOTFILESDIR=/Users/weili/dotfiles
@@ -57,13 +57,11 @@ DEFAULT_USER="weili"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler git-extras tmux tmuxinator z zsh-autosuggestions rvm nvm)
+plugins=(git bundler git-extras tmux tmuxinator z rvm nvm)
 
 if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
   FPATH=/usr/local/share/zsh/site-functions:$FPATH
 fi
-
-source $DOTFILESDIR/.fh_alias
 
 source $ZSH/oh-my-zsh.sh
 
@@ -97,37 +95,17 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin:$HOME/.fastlane/bin"
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 
-export GOPATH=$HOME/work/mobile-next/golang
-
-export DOCKERHUB_PASSWORD="XTlEiz8bWvy4Dhts"
-export DOCKERHUB_USERNAME="weilee"
-export DOCKERHUB_APBS_ORG="feedhenry"
-export TAG=latest
-
-export PATH="/usr/local/opt/gettext/bin:$PATH:$GOPATH/bin"
-export ANDROID_HOME="/Users/weili/Library/Android/sdk"
-
 alias kerb="/usr/bin/kinit weil@REDHAT.COM"
 
 # Enable Pure
-fpath+=("$HOME/.zsh/pure")
+fpath+="$HOME/.zsh/pure"
 autoload -U promptinit; promptinit
 prompt pure
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-
-[[ -s "/Users/weili/.gvm/scripts/gvm" ]] && source "/Users/weili/.gvm/scripts/gvm"
-
-switch_opsdk()
-{
-  cd /Users/weili/work/mobile-next/golang/src/github.com/operator-framework/operator-sdk && git fetch && git checkout $1 && make install && operator-sdk version
-}
-
+source /Users/weili/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
