@@ -57,7 +57,7 @@ DEFAULT_USER="weili"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git bundler git-extras tmux tmuxinator z rvm nvm)
+plugins=(git bundler git-extras tmux tmuxinator zsh-autosuggestions z rvm nvm)
 
 if (( ! ${fpath[(I)/usr/local/share/zsh/site-functions]} )); then
   FPATH=/usr/local/share/zsh/site-functions:$FPATH
