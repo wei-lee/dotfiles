@@ -1,7 +1,7 @@
 [core]
 	quotepath = false
 	excludesfile = ~/.gitignore_global
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    # pager = diff-so-fancy | less --tabs=4 -RFX
     # attributesfile = ~/.gitattributes
 [color "branch"]
     current = yellow reverse
@@ -72,6 +72,7 @@
     p = push
     df = diff --color --color-words --abbrev
     lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    mr = !sh -c 'git fetch $1 merge-requests/$2/head:mr-$1-$2 && git checkout mr-$1-$2' -
 [push]
 	default = simple
 # Requires git => 1.7
@@ -82,3 +83,10 @@
 	email = wei.li@redhat.com
 [commit]
     template = ~/.git-commit-template
+[pull]
+	rebase = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
